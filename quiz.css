@@ -1,0 +1,357 @@
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/templates/quiz.css ***!
+  \******************************************************************************************************/
+:root {
+    --background-color: #e9f0ff;
+    --text-dark: rgb(23, 23, 23);
+    --text-muted: rgb(95, 95, 95);
+    --red_wrong: #fff0f0;
+    --green_right: #edfdf3;
+    --dark_red: #e07f83;
+    --dark_green: #7fc09a;
+}
+
+h1, p {
+    margin: 0px;
+}
+
+body {
+    background-color: var(--background-color);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    overflow:auto;
+}
+
+.card {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    border-radius: 14px;
+    background-color: white;
+    padding: 24px;
+    border: solid 1px rgb(208, 208, 208);
+    box-shadow:  1px 3px 0 rgba(214, 214, 214, 0.259), 0 1px 2px -1px gray;
+    gap: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--text-muted)
+}
+.card-header-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.card-level {
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 20px;
+    height: fit-content;
+    padding: 2px 8px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 5px;
+}
+
+.card-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.card-progress-question {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+
+
+.progress {
+    height: 8px;
+    background-color: rgb(203, 203, 203);
+    border-radius: 10px;
+}
+
+.current-progress {
+    background-color: black;
+    height: 100%;
+    width: 0%;
+    transition: all 0.5s;
+}
+
+/* Cartas de perguntas */
+.card h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0px;
+}
+
+button div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: #f2f3f5;
+    border-radius: 20px;
+}
+
+button.option  {
+    content: '1px';
+    width: 100%;
+    min-height: 65px;
+    border-radius: 10px;
+    border: solid 1px rgb(208, 208, 208);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 0px 16px;
+    text-align: left;
+    background-color: white;
+    transition: all 0.3s ease;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button.option.right {
+    background-color: var(--green_right);
+    color: var(--dark_green);
+    border-color: var(--dark_green);
+}
+
+button.option.right svg.check_green {
+    display: inline-block;
+}
+
+button.option.wrong {
+    background-color: var(--red_wrong);
+    color: var(--dark_red);
+    border-color: var(--dark_red);
+}
+
+button.option.wrong svg.incorrect_red {
+    display: inline-block;
+}
+
+button.option:hover:not(.right):not(.wrong) {
+    background-color: #f9fafb;
+}
+
+button svg {
+    display: none;
+    min-width: 24px;
+    min-height: 24px;
+    margin-left: auto;
+}
+
+/* Explicação */
+
+.explicar {
+    display:none;
+    background-color: rgb(239, 246, 255);
+    color: #1c398e;
+    padding: 16px;
+    width: 100%;
+    
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+    border: solid 1px #bedbff;
+    border-radius: 10px;
+}
+
+.explicar h2 {
+    font-weight: 700;
+}
+
+span.icon {
+    display: inline-block;
+    min-width: 24px;
+    min-height: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(43, 127, 255);
+    text-align: center;
+    border-radius: 40px;
+    padding: 2px;
+}
+
+.explicar .text {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.next {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 10px;
+    border: solid 1px rgb(208, 208, 208);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 0px 16px;
+    text-align: center;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.next:hover {
+    background-color: #f9fafb;
+}
+
+.next:active {
+    background-color: #f2f3f5;
+}
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/templates/modern-normalize.css ***!
+  \******************************************************************************************************************/
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; 
+	-webkit-text-size-adjust: 100%;
+	tab-size: 4; 
+}
+
+body {
+	margin: 0;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; 
+	font-size: 1em; 
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+table {
+	border-color: currentcolor;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+legend {
+	padding: 0;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+summary {
+	display: list-item;
+}

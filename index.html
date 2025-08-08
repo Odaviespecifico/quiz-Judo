@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Judô</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body onload>
+    <div class="header">
+      <div class="header-left">
+        <img src="data:image/png;base64,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" alt="Icone Judô" />
+        <div class="">
+          <h1>Quiz de judô</h1>
+          <h2>Plataforma educacional</h2>
+        </div>
+      </div>
+      <div class="header-right">
+        <a href="addquiz.html"><button class="add-quiz">Adicionar Quiz</button></a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="hero">
+        <h2>Aprenda e Teste seus Conhecimentos sobre Judô</h2>
+        <p>
+          Uma plataforma lúdica e educacional para auxiliar na evolução dos
+          alunos e preparação para exames de faixa
+        </p>
+        <img src="af3c2d03d7704c98ad20.png" alt="Belt Ranks" />
+        <h3>Escolha seu nível</h3>
+        <div class="quizzes">
+            <a href="quiz.html?quiz_id=1" onclick="(sessionStorage.setItem('quiz','1'))">
+              <div class="quiz">
+                <div class="icon red">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </div>
+                <h4>Quiz iniciante</h4>
+                <p>Para faixas branca e amarela</p>
+                <div class="quiz-footer">
+                  <span class="circle">Iniciante</span>
+                  <span class="pergunta">6 perguntas</span>
+                </div>
+            </div>
+            </a>
+            <a href="quiz.html" onclick="(sessionStorage.setItem('quiz','2'))">
+              <div class="quiz">
+                <div class="icon blue">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </div>
+                <h4>Quiz Intermediario</h4>
+                <p>Para faixas verde, azul e roxa</p>
+                <div class="quiz-footer">
+                  <span class="circle">Intermediário</span>
+                  <span class="pergunta">8 perguntas</span>
+                </div>
+            </div>
+            </a>
+            <a href="quiz.html" onclick="(sessionStorage.setItem('quiz','3'))">
+              <div class="quiz">
+                <div class="icon green">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </div>
+                <h4>Quiz Avançado</h4>
+                <p>Para faixas marrom e preta</p>
+                <div class="quiz-footer">
+                  <span class="circle">Avança</span>
+                  <span class="pergunta">6 perguntas</span>
+                </div>
+            </div>
+            </a>
+            <a href="quiz.html" onclick="(sessionStorage.setItem('quiz','4'))">
+              <div class="quiz">
+                <div class="icon purple">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </div>
+                <h4>Quiz Completo</h4>
+                <p>Para todas as categorias</p>
+                <div class="quiz-footer">
+                  <span class="circle">Misto</span>
+                  <span class="pergunta">15 perguntas</span>
+                </div>
+            </div>
+            </a>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Categorias de conhecimento</h3>
+        <div class="card-container">
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGDklEQVR4nO2dW4hVVRzGT3YxRSvLMrEUjSywSCly8lI9qJj1UEGUlA+N1WSNUEG3BzHp5kM5YSGO9VTRzbIisIsVCZaO42NRDxWU1EMyQgWZpvOLhR+lyzMze+2915q99f+DAwNnn7W+//9be++1z8D5Gg3DMAzDMAzDMIyKw+HsAXYDPcAPwA5gE/AK8CRwJzAXOB8Y2qgpwFDVMFc1udpeVa07VHuPeuF68h8pxOWlF9gJbAQeB64HxjcqBjAeuEEaN0qz056LFILL5jcV/jBwKTAkehH/1zIEuAx4BPhQWkolRRGx6QHWA3cD50TQf67GfltzRaVs/c0K8rkcmAfcDLRpta0EXga2AL8WqKcX2AY8CEwqoPk84CGNlfvyo1q2qLaVOqvbVPs89eIwyu1+8+KCJwSGAxfpvrEceF/X5lC2A/cCozLMeTrQrptuKDulcbk0O+3DYvWnEGVOCIwBFgBPa/X+k7FhfwNvADOajDlT77ljsuDm3Ao8BVwDnFWV/gz6hMBIGdShrWQWuoBb9HJ/Z+F7zeHmGllyDUePIT7AFODRnJcdn27d36Y0InJUG3IowIXACuDHABPcWfYYcEEjEaX3Z6ABB8sQ79lhDvBWH/ecA3qCvgk4vpGY0vtXdUOaPFX7DOrT/zFtSB31mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYITVbkVXTE6y39AEjQ830mCGJMUM8UhtghniYIc1/MXqTIiZeAp7Vj9gv1u/rTo6ZrkOiM0QpO5OVsrNYNa5SzevVg+6B9ATrDR0wMOrhC+B54C6gBRhRNUOAEdLmNL4AbC4SuVFYb+iABXFZHl8Da4FFwMQcDQwr8MjPT9TcndJSJF/kCArrDR0wAj8B64AbgVOK6m1y/Kkae53mikp0Q7xjh7lwFWC0rq8tioBYrCSz1xUhsStnPfuATxVRNCavXuBsYAnwWUBGic8u1fIa8ATQqlpbVPsZ6kW/wS9Z9Bb7QEbcagemAbcDaxRB4Rqelf1q6K3AyQPpdccAtwGf67NZ2aeb8xppnZblTA3oQzUM6WfnMh1YCrwH/JGxabu1OZja5L2pes8dk4XfgXelYXrsvMVKG9Jk7hOBK3VJ6C77Bit6lWXl5pgNnJC4xmKGAN+oALfP3qAUz7VKKVsGPAAsBGYBE1xTS464ux/4qqA57rNfAveVGcWnBTRBtS9UL5apN53q1Qb1brt6WdiQUA5o3+5Cvt5R1lObRA+YrjaAOS767rsALd8qci+3CbpRz9bG4jnV1KUaC5/BWQTE5hfgEz3ltiqSLijdk4PmuizBvU3G36v3ZuVI7rlYO8RV0ui0RqUKhvR1Y/1YeVHz3bNCxiaO1fZ6t17u77EZP3ua5lqh5jsNycmi1V81ow55TQIu0Sm8QE+4LvlstXYqXVpVIdvMvi5729Xgqwa6L2lL3e/WFDgJuFpjdmuOIuxXrdtU+2r1YpF6M1u9muj18LhGalwYFzAOuEKXpWd0BuRJ93T8qeRNN9boAB1nAncAH2iMPPwMfKQaWvUgOG4wAseioEvFTH1596J2Hr05HhCXNNskKHL1nhwPhL3Ssk7aZmS9dB51qInXKf50sx8S3w97FLM6X7GpbwZErv6ludwl7FqnYbD7UFk4+B3ZHO3ny0j5PDRoslMZh6VGrh5TcHAzsVQrOuRmfED/g2nP89W+kX2r266E577YqpjvTFtgo9zw4g6gR6+O2OHDRgaA4e6V5VjDMAzDMIxGCv4F9kPrxWqEbmwAAAAASUVORK5CYII=" alt="livro">
+            </div>
+            <div class="text">
+              <h4>Conhecimento Geral</h4>
+              <p>4 Perguntas</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFwklEQVR4nO2aXYxdUxTHrzHaYabiZaZjtBEh8UKNhpbGW5MRRPBKfLw19YCHJjWeRIJp66MfQ/rCc3E9oqJCpypiGkKbChHxMToqSjOKKe38ZHXWubPvvvt87HP2OePW/JObez722vu/1znrv9c+e9dqC1hAqQCWAPcDdeAr4ATxkHtfalmxWVJrVwDnAg8DP5MfYvuQ1FUV6UXAFuAoMAlsAjpz1HMRsNvoyBiwDrgS6E6w69YyUnafYf+W1JmDx3nan0ntk/RnUZLBFsdTGPFstA84qLbS8C2+xI26bgN+0rqkzj5P+82O/mxKMpjUQmuAm/T4GLA0Y4NLjc4fApY79OAB4DVDD07o8asa9z2WzXKtK3KCD5djjv4cSTL6XQudER9gXM+/Ba5PaXAV8J3raakePJJRD47acW+9Vb5cxvXagJ5PJRl+pIXu1vNeIxZPA68Ad2pli/X/Ln16M1pOyvdaeiAxHGEa2CqdAC6QJw7cAIzqvQhvmnFflAtwn17bn+SA9VpoMnrVVBhHgD9Tnpzcf8oUGevJCX4Ark5ofyUwYZS336RcXDQcIi1Zl6aaH7riDVgGPArsBX7UpyX/7wMbgUsS9EDwF3BNbONzdtcCJy0nNMW9DxeLx37pYxqBXiverksjHRODYmtia0J5eVPWG+cSDiZC8DhohmYWJ3xgxNsu4A6Ns5akREVuQGNyl9pEMXhEj53CZYXJg3pNNAG1DcUjW+cd8Savri8kBp/WOiL7bktr+qzON+Jdh0vBH6F41PKCuXgb0ydyytHQKb03pjG4zLBvcoA8ZaPDLZ3XMhdGDgjFIxiYnahEeD1D+cNmCDhGhpYMD7hR7x0KzacQgH7gb+vXn2IzaougOmFcfy3pLfCC2mwPzacQgOHI0/oTPJZis0LFaDrjMLhSh8HTSTlDXj65AXQA32gjN+sPvdaRYvuikQgNpnRexnPBaFl8cgGrAZtAim0X8K6Wlae7Q4e6HlX8NfraRwnQHklvy+KT1wF1+xWTY71Wz2DfpXoQ5ekuzKhzFpfNxwvMic0/kmikXY+poxN43EhO4hywLW3cDsHHCxhi47gXic9wSuff0XLT2snV+gWoW493GCHwdtKXqKJ8vEBKbGURH+A5LTORNBKIQBqzwWfK4uMFYCipwgyErrCHwSgVdk2GjNmg2Fwemk8eB9RtsXGUiRUf4Hm9t82RCvfFTIai5OnZ0Hx8O9+fJcNKKgccUDKr9NyeALkmQ1Eq/HFoPr4OGI4Tm6ziAxzX642PnWnzAWMy9FtoPpkBnAN8rZUMZSjvFB/gV4cD5HvD54YDvgAudjjgl9B8fBww5FOBJT4NgsAnOUIg+iByIDQfHwfU08Qmi/gYiy3bPURQcgLB5tB8shr25xERl50OgzM6DA5mGAYH7WEwJJ+shsNZxSaL+BhLVBMps0EzERopi0+aQUeRRMIlPpoKS3rrmg326LBnpsK7o1S4DD5pBkNF1DNBDDt1dTYNTSvSZfFJMqj7io1nZhjhUxnn9SfHZ1A1nyaEmk4m1ZPQ0ZbrVfBpQsgPCgmZoY8DSufTgK6blYV9vg6oik8DlAy7nbmW3der4tNA7I2CKOqAsvm4docE+5Ymy9Ra5/EcDqiETwPAe3pzYy0QdC1PsCeHAyrh0wBwu948qQuLRYadAa0jyuxuzeGASvg0AXiS8HjCaiOTA6riE7c3T1Zxpgo0MqWrOy2ejgp4XC+VT+XwdcBZB/5PDgAuA142Vnx9IDYvAZfW2hHMzvejL8JFILPF1bV2AnA+8L124A3gKp8t77rba4Wxw1S2vXbV2gXAvUr8syI7tHQLbPTB9J5auwDYqaQ3BKhrg9a1s9YuYG5T89oAda2NncKeJWrf3qMD4dS+/UYHCqp9jvb+W6MDgdS+bUcHAqp9W44OBFT7AqPDWNVtNyDr98w/GnsIKgez29LnG3vnzQELqLU//gUnAhmnTK32twAAAABJRU5ErkJggg==" alt="moral">
+            </div>
+            <div class="text">
+              <h4>História e Filosofia</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,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" alt="moral">
+            </div>
+            <div class="text">
+              <h4>Código moral</h4>
+              <p>4 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEJklEQVR4nO3cXYgWVRzH8aMimpCKe7EqYeYiFmZdFKEX0YVvpF7WlYhClJC1ir2IJiJGIF31Jm5EUXoTWd0Ey8oisoLphhvtbURhsEK+5GumbvqNP88RHh/3zJydneeZc2b+n1s9M+f/22HmzDnnGWOUUkoppZRSquyAKcA+4BLxuwh8AjxgQgN0UT5dJiTAeOA65fOP1GZCoUG3UElvHftNaOTBAXxsHySx+xv4KMiHYT0iZ2JB5EwsiJyJBZEzsSByJhZEzoQAeAJ4FzgJnAH+A84Dx4G3gHbi125rOW5rkxqHgBPAHmBRMwOeBxwC7qR08hbxu5Xy75LBN8AjeYe83A7i1b0kk2V5hjzccAJ179W/LI/bhV7J6S4Ac8cS9LceJ1E1X49ldOF68F0FtsvDAJgIPAZ8SbncAb4AHrU1Sq07gGsJ///xLEHLMMYV8lOONi/aoVDshoEXHDU+nRD27ixByzh5JNtT2r1M/F5KqXGno92PWYKWl5GRpI4dge+J13ce9XU42g5lCfqm42Cpk+HALOAG8flX+u654j+Sm1mCPuc42LOe7Q8Tnx7P2p5ztP8rS9B9joP1AuM82m8hPp0edY0DjjjaH80S9DsJHXrTo/184tPhUde2hPaJAwXXAWcn3GdlCLfO4xj9xOOERz3rE4avcn+fOeqg7YHfT+iYDNC3prTfRDxeTalla8rM5d5MIddtIfg5pYMyXTjN0b7N/qVDJ31sc9QwzU4PJzk15q0JwMPA2ZQT/S6zfI72nxO+zxx9XwH8kdJWspkzppDrTrjEcxbvq8b7lKxGkL5YUKT75iikBuCgR1vJZHEuITdMMrneFuvJPMB7wPS6tj2Eq7uun9Nt311zGfXONG1Jy85gDYxijvZt+xa1mHA9Y/u4zfbZx0Duy1gjhD3JbtL2NSQvAsAxwtNn+yZ99CX7Cyc1NeSGwNcAf1Idp4HVLQu4IewH7a7LMsxBu0htH0qthYTcELissPxA+fQCT5rQACuBn4hfv+u9ICjAqsjmOe6SVaVVJjaytggcCHxfyG1728tnI0yRqI2/9wa2R+QK8CmwwJQNMBXYWPBtRc79ivTFVAG1OZAPgMstCPeyPVfzdoGGDlja5HG43IOfL7rOIAC7mxj0rqLrC+2Xt91NeuGYUHR9QaG2GvNbjiH/Cswouq4gUdtQeDGnh9/CousJGrXlo+FCN4ZXBbDWjhayLEttKLr/UQFeyxD0G0X3WymllFKq4oDJwGY7T+yzQ8jXNbs01dnSfRghAh4CBmm+X+RcpsJX8mALQq4Pu3pXNrXbRau9bqqGYtYNU38+UTrUfurcaldN1VAQUzVo0Bp09Ajjq+nhfu28pJ8+7jJlRHhfTQ/ra+d5QYOu7K1jvykrwvhqehxfO1dKKaWUUkop0yL/A8Pkpy5Zek0uAAAAAElFTkSuQmCC" alt="trofeu">
+            </div>
+            <div class="text">
+              <h4>Graduações e faixas</h4>
+              <p>7 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,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" alt="alvo">
+            </div>
+            <div class="text">
+              <h4>Fundamentos Técnicos</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAJeUlEQVR4nO2de4xeRRXAb1vxUaxYCJUiKEFFlBoVhaggggYVMaZYLNZKsRiQVkBARbGCFR8YkhpReShioQVBiSgSEAMIVAoqWKouQhQfELQ8lNJaqNJuf+aw5zPD2bn3u3dmvrvf7s4v2T822Xvm3Jk7j/OaLYpMJpPJZDKZTCaTyWQymWiAXYD5wJnAVcDdwAPAWmAz8HNgu9zVPQR4ObAE+CP1+FoekN4MxD7A9cAWmvEY8Nw8KOkGYifg8oCBcDkBmJAHJX4wDgIeqehoGaRVwLeAY4B3AXvqkmb5N3AL8Elg5zw4zQfjYxWzYrUOwPSSZ18AbKwYyP8C3wSm5oGpNxgnlXTk74C315RxFt25F5iRB6W6I9/jmRlyhP0M8Iy6nQc8E/gEcAlwXcXS97Cc3PKg+DvxxcCjpsMerzsrugzQROCtwK2eQRkAnpMHZXinXeFZ69+WsqOASSWb/qJxMyC6yc4DzlHr+W86EwaB3wK7qZ1hOaGHOp1v2loHTAP2ABYAZ6vdI6e4PwP/AjbpbNqjGG3oGj4H+EUNG+JGtTVcbuul7QBM1o52eYJ63FyMJoCZwJ9ohswWl31b0PNwwtmz6HeArYHlxLO6JX230lNWCLLk/hQ4Hti+6DeAbYHfVLzAOvXIfl73k3meWdHhsy3q/W2GL1tyEjsXOBaYLQcL4GjKES/AIjnJFX00M8oG41rgYNlTPM+JjeDjwy3qfqRp+8qSv5ughmkVP25iK/UM4EKPcn8BDujy3DaeJW5TmzYB8Ia6yyWwO/AT4B61j3yc3ZbuZUq+06PULXX9RHrUdHmw91o/rf3nmVPg2prPPQt4vwbEXETW/r3XvFwxsSNcJGo3pcHzLzLP39Nbjb06yKx0mdTg2ReqXeVya281LlfGGnOySe8VYDS6PNA7jUt1cA8XmwOef7PH1npdb7StVuSrRonLA10Z4jx0TzkTeqNxqQ5uZz4eKGOF6Ysz0mvaXQl7snpHoBw75V+aXtvStndIMUOBDxk5K9Nr210JOX93kIDQsxM5FT+QXtvStiXK6HJNoBzZS2h6OEiGbNxGgYEIWScbWRen1baRYfilCFmSfuSyU1ptu1vmLjdGyHqlkbWhjUwRCQF7Qr2viZAnoeWR2dhleTKbYZQH1ONTem86bUvb/Jxp865IeeKqHzkHJPBPp/F7I+SIv8gyM6223nZPNW3KB3ZwhLyBVLMtVIGbncbl6Pr8QDkStGrdJwRM1XiNy3cjVgyJcHYYbD2NVXNqXWYFypE9w2V6em1L25Y4u8ttgXLEI9x6CMEqsX8dT2kNOZat0mtb2vbepu07AuXIrG4l/NzEGFofKOfvRs7u6bUtbXuhafuHgXJcb4NwZHptuytxh1FiRaCcK42cD6bXtvaXfUqC/TT6xBYE8KRRIihnFviokXN7GzEROQV5vuwg2wHY0XNiq+01ToInBDs5IgPkYU/M+tj0Wv8/ae4CcyoSfh/q2NSoqaXdjHvNjXXZJzKFdNDIk993TKv1U229Gz+zImTua2QF22XBiM/JKHGZRAAj5M0xDkthdlqtn2rnK6aNf0iCd4S8afruLsvTah2e1/SgBJ0SOhqXpNXaa4juFTkYazz90NrBxMaVJeBvWRAh8029NLDEaWkSFP7jy4iJyFpB+yRYZqqSM5fvRQ7yE0be3gn1PSKFZe7IO8/Iu2rEK7R0UOyyFWxtA9838pYm1PWmFHaHk6tlU2ZfW/QDnhPXIRGyDjSyxFZ4fQ+ig2Ir7BIhbz8jb33rtkcZEtS3S0HEmX4i8Acjb1WonePkX9na9utC5alMycp0uajoF7TGw6bCHJPQC4tG5LYONNpWe2yc4L0JeB/DGbkEOR/AMqOguFb2S2jnBBlvwKEM5+uRV3rYVNIbin5D/TmS5e7yjQh5k3Xpczkiwcnqppi1Hphr5G3sm83covUSLudHyrvUyDs8QIaUPrhcGqmTHeBLin4FOM4oe06kvB/FWsAej8IVkTrNSxFDaQWP6+OsSHnXxCbRyTMpkuEq5F1b9CvAYqPs6Yn9TjMDZByScgNWz/ToKAL1JD58PFLeSiOv8SUC8kzKvFvgLUbeqqIf0VSYgZSxZeDO2JiLp2zizkidZhh5W7pVi42UP0sK7a3LY7fIoM8WI3NGog6MCaZN9Hx469rItqxrKxyvN7eRyikIvAp4yFOdNSmwBuWvRtZDMTcBefaRDle3UWNfln7/ZZNO6iIVq9sEdt7CkqLKmYmDaRv0Go0gI1Ey5SnnV8BhPc8x0w3tB56ME1v0OT3gKo65mmjg49wEup9X8fHMbRpUUvf7yZ7MFRfJOTtNCoNi9bdr5uwaddoSDz+l4b1WO2gWui8M2uHCFEX5Ovsuopw1qkujzpMQMPBLqpEMl+8AL4t5AfkCZtUYCLkc7At1Y+kq9wBNDLCpOC6ybB0V/ALl7R9dUWeO6nSZ6jihwTsdqIZs1WU7m/R6wWaJ2MCunkJGi5REH1U3qU2y44ETdXOuYlAOBL2sQNJT4dKK6z063K06187sB16hnW4drXY21it90KswbDqO+/Vc3OTYKDFmrdiViFoVa/VysV2LltAPb4mnHM2yXt9h54YJFR+p+ABlJn26jp/GFtKjG9fSJiFPrb84s8sNoeiZfkFI8CkV2nkLPPaFZaO+09SGe9d8T7Vxhy+WPfhGTYuxXN80I12DQo90ebFlMQZar1CDdFmXD0lSXw8NyKhZ7PngZaYc5jPw7vf84aImsXHZT0oifR3u02tgty36HIYKW09SnctY3jQxXA8L1pBe97R7t/QaVsvChg1t53EGdrhf60laK8ZJfNHZfM8H22Fl01OT3kK00RtWVqPs0ZgomO4XAyWHgFPHwjWsDM3+00qO6gNNb8pWm81FBmhK51Rll6ra11uIIagXWVruAl5djDEYqiuxaUrCDQ1vEpriqa+c47vNYEXkSHcSCYKqckcDuiLYqinhU5GXvy33BYHWaLla3R87hX89FpaomkuYVHul5PYi4mZOHxvG07+DYOgCtio3TFMeKzwbegyLi3EGcHrC/ruvk7pT5UKuy5MxxTqjFYY81lXhiLrIsfqgjtDtpQK14c/PjMCri3EKQ5cqu1wwEkrY2ogTi3EKw/8JTbuXeapfJuYfdY11BlstaxPDcaTfeBTwkjYHZFqig8BYZXPrl/Tr6SzlkXmsIH1yXKuDkclkMplMJpPJZDKZTCaTyWQymaK/+B+dOcT54EDVqQAAAABJRU5ErkJggg==" alt="pessoas">
+            </div>
+            <div class="text">
+              <h4>Técnicas (Nage-waza)</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT48c3ZnIGZpbGw9IiNGRkZGRkYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik00Ni45OTksMjcuNzA4di01LjVsLTYuNTQ2LTEuMDdjLTAuMzg4LTEuNTUtMC45OTYtMy4wMDctMS43OTgtNC4zNDJsMy44MTUtNS40MzdMMzguNTgsNy40NzJsLTUuMzY4LDMuODU5Yy0xLjMzOC0wLjgxLTIuODA1LTEuNDI4LTQuMzY2LTEuODE3TDI3LjcwNiwzaC01LjVsLTEuMDYsNi40OTJjLTEuNTYyLDAuMzgzLTMuMDM3LDAuOTkzLTQuMzc5LDEuNzk5bC01LjM1Mi0zLjgyNGwtMy44ODksMy44ODdsMy43NjUsNS4zODRjLTAuODE0LDEuMzQ3LTEuNDMzLDIuODItMS44MjYsNC4zOTJsLTYuNDY0LDEuMDc2djUuNWw2LjQ1NywxLjE0NWMwLjM5LDEuNTY4LDEuMDA5LDMuMDQxLDEuODI2LDQuMzkxbC0zLjgxNiw1LjMzN2wzLjg4NywzLjg5MWw1LjM5MS0zLjc3NmMxLjM0NiwwLjgwOCwyLjgxNywxLjQyMyw0LjM3OSwxLjgwOEwyMi4yMDYsNDdoNS41bDEuMTU2LTYuNTEzYzEuNTU0LTAuMzk0LDMuMDIyLTEuMDEzLDQuMzU1LTEuODI0bDUuNDI4LDMuODA5bDMuODg4LTMuODkxbC0zLjg3NS01LjM4YzAuODAyLTEuMzM1LDEuNDExLTIuNzk0LDEuNzk1LTQuMzQ0TDQ2Ljk5OSwyNy43MDh6Ii8+PGNpcmNsZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGN4PSIyNSIgY3k9IjI1IiByPSI3Ii8+PC9zdmc+" alt="configuração">
+            </div>
+            <div class="text">
+              <h4>Técnicas (Katame-waza)</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZ0lEQVR4nO3c0UrDQBRF0X6epQ9WUfqg3+6DFRX6CQpHAhVKTaTp3DtzkuwNgiJM5rq0TRvb1YqIiIiIiMgsndV6P4sPELMAMQuQmYFI2kh6k7SXtA7Yz2ZJ62WAdBv77TVgP/slrdd3AEBmBrI+bvJV0k3AftZLWq/vADwOcQoQswAxCxCzADELELMAMQsQswAxCxCzADELELMAKUvSnaQPSQdJD4XLAVKSpJ2kr5Nf6kPEojzbG4PR9RmxMCAxGN3X9w4XqKKvWW+Pa3Uf24D1ovc3hLErXdvuEq7+Dls8aPL+YjGcQNQ/bPHAyfuLxQgCKb7GrGGM4sET9xePEQEScPzdwLB1fgDX7y9nLy1BJD32DPst6al7kDXwvWeH/WUetAmILhi2JUoTjFYgGjFsC5RmGC1AdMWwNVGaYtQGUcGwNVCaY9QEiRhWiSgWGLVAIodVAooNRg2QjGEViGKFkQ2SOawCUOwwMkFqDKsCFEuMLJCaw+oKFFuMDJAWw2oEijVGNEjLYXUBij1GJIjDsPoHxWF/1UCqP0U94afz00GiMRRwDTz5gpfv69Qz/jK0kEvC4SBZN1Na0D9NhIFk3mco/nXl25P1trN7nfpkzlam2hgQMIxAwDACAcMIRNLtZB5ULQTk9DQPDAOQdzD8brK6c+6X7vOae1tkY057qUKAmAWIWYCYBYhZgJgFiFmAzAzE/b3VZb5eBoj1e6vLfL2+AwAyMxDr91aX+Xp9B+C5LKcAMQsQswAxCxCzADELELMAMQsQswAxCxCzADEHobIAMQsQswAxq/VdEBERERER0eqsHyoCrY4C/5LaAAAAAElFTkSuQmCC" alt="grafico">
+            </div>
+            <div class="text">
+              <h4>Regras e Pontuação</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>          
+          <div class="card">
+            <div class="logo">
+              <img src="data:image/png;base64,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" alt="livro">
+            </div>
+            <div class="text">
+              <h4>Equipamentos</h4>
+              <p>6 Perguntas</p>
+            </div>
+          </div>                   
+        </div>
+      </div>
+      <div class="feature-section">
+        <h3 class="feature-title">Funcionalidades</h3>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="card-header">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZ0lEQVR4nO3c0UrDQBRF0X6epQ9WUfqg3+6DFRX6CQpHAhVKTaTp3DtzkuwNgiJM5rq0TRvb1YqIiIiIiMgsndV6P4sPELMAMQuQmYFI2kh6k7SXtA7Yz2ZJ62WAdBv77TVgP/slrdd3AEBmBrI+bvJV0k3AftZLWq/vADwOcQoQswAxCxCzADELELMAMQsQswAxCxCzADELELMAKUvSnaQPSQdJD4XLAVKSpJ2kr5Nf6kPEojzbG4PR9RmxMCAxGN3X9w4XqKKvWW+Pa3Uf24D1ovc3hLErXdvuEq7+Dls8aPL+YjGcQNQ/bPHAyfuLxQgCKb7GrGGM4sET9xePEQEScPzdwLB1fgDX7y9nLy1BJD32DPst6al7kDXwvWeH/WUetAmILhi2JUoTjFYgGjFsC5RmGC1AdMWwNVGaYtQGUcGwNVCaY9QEiRhWiSgWGLVAIodVAooNRg2QjGEViGKFkQ2SOawCUOwwMkFqDKsCFEuMLJCaw+oKFFuMDJAWw2oEijVGNEjLYXUBij1GJIjDsPoHxWF/1UCqP0U94afz00GiMRRwDTz5gpfv69Qz/jK0kEvC4SBZN1Na0D9NhIFk3mco/nXl25P1trN7nfpkzlam2hgQMIxAwDACAcMIRNLtZB5ULQTk9DQPDAOQdzD8brK6c+6X7vOae1tkY057qUKAmAWIWYCYBYhZgJgFiFmAzAzE/b3VZb5eBoj1e6vLfL2+AwAyMxDr91aX+Xp9B+C5LKcAMQsQswAxCxCzADELELMAMQsQswAxCxCzADEHobIAMQsQswAxq/VdEBERERER0eqsHyoCrY4C/5LaAAAAAElFTkSuQmCC"
+                alt="Ícone gráfico"
+                class="icon"
+              />
+              <h4 class="card-title">Relatórios detalhados</h4>
+            </div>
+            <p class="card-text">
+              Acompanhe o progresso dos alunos com relatórios completos por
+              categoria e nível de dificuldade.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="card-header">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEJklEQVR4nO3cXYgWVRzH8aMimpCKe7EqYeYiFmZdFKEX0YVvpF7WlYhClJC1ir2IJiJGIF31Jm5EUXoTWd0Ey8oisoLphhvtbURhsEK+5GumbvqNP88RHh/3zJydneeZc2b+n1s9M+f/22HmzDnnGWOUUkoppZRSquyAKcA+4BLxuwh8AjxgQgN0UT5dJiTAeOA65fOP1GZCoUG3UElvHftNaOTBAXxsHySx+xv4KMiHYT0iZ2JB5EwsiJyJBZEzsSByJhZEzoQAeAJ4FzgJnAH+A84Dx4G3gHbi125rOW5rkxqHgBPAHmBRMwOeBxwC7qR08hbxu5Xy75LBN8AjeYe83A7i1b0kk2V5hjzccAJ179W/LI/bhV7J6S4Ac8cS9LceJ1E1X49ldOF68F0FtsvDAJgIPAZ8SbncAb4AHrU1Sq07gGsJ///xLEHLMMYV8lOONi/aoVDshoEXHDU+nRD27ixByzh5JNtT2r1M/F5KqXGno92PWYKWl5GRpI4dge+J13ce9XU42g5lCfqm42Cpk+HALOAG8flX+u654j+Sm1mCPuc42LOe7Q8Tnx7P2p5ztP8rS9B9joP1AuM82m8hPp0edY0DjjjaH80S9DsJHXrTo/184tPhUde2hPaJAwXXAWcn3GdlCLfO4xj9xOOERz3rE4avcn+fOeqg7YHfT+iYDNC3prTfRDxeTalla8rM5d5MIddtIfg5pYMyXTjN0b7N/qVDJ31sc9QwzU4PJzk15q0JwMPA2ZQT/S6zfI72nxO+zxx9XwH8kdJWspkzppDrTrjEcxbvq8b7lKxGkL5YUKT75iikBuCgR1vJZHEuITdMMrneFuvJPMB7wPS6tj2Eq7uun9Nt311zGfXONG1Jy85gDYxijvZt+xa1mHA9Y/u4zfbZx0Duy1gjhD3JbtL2NSQvAsAxwtNn+yZ99CX7Cyc1NeSGwNcAf1Idp4HVLQu4IewH7a7LMsxBu0htH0qthYTcELissPxA+fQCT5rQACuBn4hfv+u9ICjAqsjmOe6SVaVVJjaytggcCHxfyG1728tnI0yRqI2/9wa2R+QK8CmwwJQNMBXYWPBtRc79ivTFVAG1OZAPgMstCPeyPVfzdoGGDlja5HG43IOfL7rOIAC7mxj0rqLrC+2Xt91NeuGYUHR9QaG2GvNbjiH/Cswouq4gUdtQeDGnh9/CousJGrXlo+FCN4ZXBbDWjhayLEttKLr/UQFeyxD0G0X3WymllFKq4oDJwGY7T+yzQ8jXNbs01dnSfRghAh4CBmm+X+RcpsJX8mALQq4Pu3pXNrXbRau9bqqGYtYNU38+UTrUfurcaldN1VAQUzVo0Bp09Ajjq+nhfu28pJ8+7jJlRHhfTQ/ra+d5QYOu7K1jvykrwvhqehxfO1dKKaWUUkop0yL/A8Pkpy5Zek0uAAAAAElFTkSuQmCC"
+                alt="Ícone troféu"
+                class="icon"
+              />
+              <h4 class="card-title">Preparação para Exames</h4>
+            </div>
+            <p class="card-text">
+              Identifique áreas que precisam de melhoria e prepare-se
+              adequadamente para os exames de faixa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

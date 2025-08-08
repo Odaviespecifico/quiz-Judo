@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script defer src="addquiz.js"></script><link href="addquiz.css" rel="stylesheet"></head>
+
+<body>
+  <!-- Import Lottie -->
+  <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+  type="module"></script>
+
+  <div class="header">
+    <div class="header-left">
+      <img src="data:image/png;base64,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" alt="Icone Judô" />
+      <div class="">
+        <h1>Quiz de judô</h1>
+        <h2>Plataforma educacional</h2>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="index.html"><button class="add-quiz">Retornar</button></a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="card question-title">
+      <input type="text" name="quiz_name" id="quiz_name" placeholder="Nome do Quiz" minlength="3" required>
+    </div>
+    <form action="" method="post">
+      <div class="card column">
+        <div class="card-pergunta">
+          <img src="https://img.icons8.com/?size=40&id=63684&format=png&color=000000" alt="question" class="logo">
+          <input required type="text" name="question_text" id="question_text" placeholder="Texto da pergunta"
+            class="question-title">
+          <select required name="categorias" id="categorias">
+            <option value="0">Categoria</option>
+          </select>
+        </div>
+        <hr>
+        <div class="container-alternativa">
+          <input type="radio" name="alternativa_correta" required value="1">
+          <input required type="text" name="alternativa1" id="alternativa1" placeholder="Alternativa 1"
+            class="alternativa">
+        </div>
+        <div class="container-alternativa">
+          <input type="radio" name="alternativa_correta" required value="2">
+          <input required type="text" name="alternativa2" id="alternativa2" placeholder="Alternativa 2"
+            class="alternativa">
+        </div>
+        <div class="container-alternativa">
+          <input type="radio" name="alternativa_correta" required value="3">
+          <input required type="text" name="alternativa3" id="alternativa3" placeholder="Alternativa 3"
+            class="alternativa">
+        </div>
+        <div class="container-alternativa">
+          <input type="radio" name="alternativa_correta" required value="4">
+          <input required type="text" name="alternativa4" id="alternativa4" placeholder="Alternativa 4"
+            class="alternativa">
+        </div>
+        <hr>
+        <input required type="text" name="explicacao" id="explicacao" placeholder="Qual a explicação da pergunta?">
+      </div>
+    </form>
+  </div>
+  <div class="butoes">
+    <button type="button">Adicionar alternativa</button>
+    <button type="submit">Publicar Quiz</button>
+  </div>
+  <dialog class="status">
+    <h1>Adicionando quiz...</h1>
+    <hr>
+    <svg class='loading'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a2" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#357ABD"></stop><stop offset=".3" stop-color="#357ABD" stop-opacity=".9"></stop><stop offset=".6" stop-color="#357ABD" stop-opacity=".6"></stop><stop offset=".8" stop-color="#357ABD" stop-opacity=".3"></stop><stop offset="1" stop-color="#357ABD" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a2)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#357ABD" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
+    
+  </dialog>
+</body>
+
+</html>
