@@ -28,14 +28,14 @@
 
   <div class="content">
     <div class="card question-title">
-      <input type="text" name="quiz_name" id="quiz_name" placeholder="Nome do Quiz" minlength="3" required>
+      <textarea type="text" name="quiz_name" id="quiz_name" placeholder="Nome do Quiz" minlength="3" maxlength="70" required></textarea>
     </div>
     <form action="" method="post">
       <div class="card column">
         <div class="card-pergunta">
           <img src="https://img.icons8.com/?size=40&id=63684&format=png&color=000000" alt="question" class="logo">
-          <input required type="text" name="question_text" id="question_text" placeholder="Texto da pergunta"
-            class="question-title">
+          <textarea required type="text" name="question_text" id="question_text" placeholder="Texto da pergunta"
+            class="question-title" maxlength="100"></textarea>
           <select required name="categorias" id="categorias">
             <option value="0">Categoria</option>
           </select>
@@ -43,26 +43,26 @@
         <hr>
         <div class="container-alternativa">
           <input type="radio" name="alternativa_correta" required value="1">
-          <input required type="text" name="alternativa1" id="alternativa1" placeholder="Alternativa 1"
-            class="alternativa">
+          <textarea required type="text" name="alternativa1" id="alternativa1" placeholder="Alternativa 1"
+            class="alternativa" maxlength="500"></textarea>
         </div>
         <div class="container-alternativa">
           <input type="radio" name="alternativa_correta" required value="2">
-          <input required type="text" name="alternativa2" id="alternativa2" placeholder="Alternativa 2"
-            class="alternativa">
+          <textarea required type="text" name="alternativa2" id="alternativa2" placeholder="Alternativa 2"
+            class="alternativa" maxlength="500"></textarea>
         </div>
         <div class="container-alternativa">
           <input type="radio" name="alternativa_correta" required value="3">
-          <input required type="text" name="alternativa3" id="alternativa3" placeholder="Alternativa 3"
-            class="alternativa">
+          <textarea required type="text" name="alternativa3" id="alternativa3" placeholder="Alternativa 3"
+            class="alternativa" maxlength="500"></textarea>
         </div>
         <div class="container-alternativa">
           <input type="radio" name="alternativa_correta" required value="4">
-          <input required type="text" name="alternativa4" id="alternativa4" placeholder="Alternativa 4"
-            class="alternativa">
+          <textarea required type="text" name="alternativa4" id="alternativa4" placeholder="Alternativa 4"
+            class="alternativa" maxlength="500"></textarea>
         </div>
         <hr>
-        <input required type="text" name="explicacao" id="explicacao" placeholder="Qual a explicação da pergunta?">
+        <textarea required type="text" name="explicacao" id="explicacao" placeholder="Qual a explicação da pergunta?" maxlength="500"></textarea>
       </div>
     </form>
   </div>
